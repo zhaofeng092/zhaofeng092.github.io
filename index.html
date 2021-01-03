@@ -1,274 +1,1010 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>兆锋的个人网站</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <title>zhaofeng092</title>
+  <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
+    rel='stylesheet' type='text/css' />
+  <style type='text/css'>
+    html {
+      overflow-x: initial !important;
+    }
+
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --select-text-bg-color: #B5D6FC;
+      --select-text-font-color: auto;
+      --monospace: "Lucida Console", Consolas, "Courier", monospace;
+      --title-bar-height: 20px;
+    }
+
+    .mac-os-11 {
+      --title-bar-height: 28px;
+    }
+
+    html {
+      font-size: 14px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+      bottom: 0px;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      font-size: 1rem;
+      line-height: 1.42857;
+      overflow-x: hidden;
+      background: inherit;
+      tab-size: 4;
+    }
+
+    iframe {
+      margin: auto;
+    }
+
+    a.url {
+      word-break: break-all;
+    }
+
+    a:active,
+    a:hover {
+      outline: 0px;
+    }
+
+    .in-text-selection,
+    ::selection {
+      text-shadow: none;
+      background: var(--select-text-bg-color);
+      color: var(--select-text-font-color);
+    }
+
+    #write {
+      margin: 0px auto;
+      height: auto;
+      width: inherit;
+      word-break: normal;
+      overflow-wrap: break-word;
+      position: relative;
+      white-space: normal;
+      overflow-x: visible;
+      padding-top: 36px;
+    }
+
+    #write.first-line-indent p {
+      text-indent: 2em;
+    }
+
+    #write.first-line-indent li p,
+    #write.first-line-indent p * {
+      text-indent: 0px;
+    }
+
+    #write.first-line-indent li {
+      margin-left: 2em;
+    }
+
+    .for-image #write {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    body.typora-export {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .typora-export .footnote-line,
+    .typora-export li,
+    .typora-export p {
+      white-space: pre-wrap;
+    }
+
+    .typora-export .task-list-item input {
+      pointer-events: none;
+    }
+
+    @media screen and (max-width: 500px) {
+      body.typora-export {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      #write {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .CodeMirror-sizer {
+        margin-left: 0px !important;
+      }
+
+      .CodeMirror-gutters {
+        display: none !important;
+      }
+    }
+
+    #write li>figure:last-child {
+      margin-bottom: 0.5rem;
+    }
+
+    #write ol,
+    #write ul {
+      position: relative;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+      image-orientation: from-image;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      color: inherit;
+      font: inherit;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      line-height: normal;
+      padding: 0px;
+    }
+
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+    }
+
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6,
+    #write p,
+    #write pre {
+      width: inherit;
+    }
+
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6,
+    #write p {
+      position: relative;
+    }
+
+    p {
+      line-height: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      break-after: avoid-page;
+      break-inside: avoid;
+      orphans: 4;
+    }
+
+    p {
+      orphans: 4;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    .md-math-block,
+    .md-rawblock,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .md-blockmeta {
+      color: rgb(204, 204, 204);
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    sup.md-footnote {
+      padding: 2px 4px;
+      background-color: rgba(238, 238, 238, 0.7);
+      color: rgb(85, 85, 85);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    sup.md-footnote a,
+    sup.md-footnote a:hover {
+      color: inherit;
+      text-transform: inherit;
+      text-decoration: inherit;
+    }
+
+    #write input[type="checkbox"] {
+      cursor: pointer;
+      width: inherit;
+      height: inherit;
+    }
+
+    figure {
+      overflow-x: auto;
+      margin: 1.2em 0px;
+      max-width: calc(100% + 16px);
+      padding: 0px;
+    }
+
+    figure>table {
+      margin: 0px;
+    }
+
+    tr {
+      break-inside: avoid;
+      break-after: auto;
+    }
+
+    thead {
+      display: table-header-group;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0px;
+      width: 100%;
+      overflow: auto;
+      break-inside: auto;
+      text-align: left;
+    }
+
+    table.md-table td {
+      min-width: 32px;
+    }
+
+    .CodeMirror-gutters {
+      border-right: 0px;
+      background-color: inherit;
+    }
+
+    .CodeMirror-linenumber {
+      user-select: none;
+    }
+
+    .CodeMirror {
+      text-align: left;
+    }
+
+    .CodeMirror-placeholder {
+      opacity: 0.3;
+    }
+
+    .CodeMirror pre {
+      padding: 0px 4px;
+    }
+
+    .CodeMirror-lines {
+      padding: 0px;
+    }
+
+    div.hr:focus {
+      cursor: none;
+    }
+
+    #write pre {
+      white-space: pre-wrap;
+    }
+
+    #write.fences-no-line-wrapping pre {
+      white-space: pre;
+    }
+
+    #write pre.ty-contain-cm {
+      white-space: normal;
+    }
+
+    .CodeMirror-gutters {
+      margin-right: 4px;
+    }
+
+    .md-fences {
+      font-size: 0.9rem;
+      display: block;
+      break-inside: avoid;
+      text-align: left;
+      overflow: visible;
+      white-space: pre;
+      background: inherit;
+      position: relative !important;
+    }
+
+    .md-diagram-panel {
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      padding-top: 0px;
+      padding-bottom: 8px;
+      overflow-x: auto;
+    }
+
+    #write .md-fences.mock-cm {
+      white-space: pre-wrap;
+    }
+
+    .md-fences.md-fences-with-lineno {
+      padding-left: 0px;
+    }
+
+    #write.fences-no-line-wrapping .md-fences.mock-cm {
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .md-fences.mock-cm.md-fences-with-lineno {
+      padding-left: 8px;
+    }
+
+    .CodeMirror-line,
+    twitterwidget {
+      break-inside: avoid;
+    }
+
+    .footnotes {
+      opacity: 0.8;
+      font-size: 0.9rem;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .footnotes+.footnotes {
+      margin-top: 0px;
+    }
+
+    .md-reset {
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      outline: 0px;
+      vertical-align: top;
+      background: 0px 0px;
+      text-decoration: none;
+      text-shadow: none;
+      float: none;
+      position: static;
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      cursor: inherit;
+      -webkit-tap-highlight-color: transparent;
+      line-height: normal;
+      font-weight: 400;
+      text-align: left;
+      box-sizing: content-box;
+      direction: ltr;
+    }
+
+    li div {
+      padding-top: 0px;
+    }
+
+    blockquote {
+      margin: 1rem 0px;
+    }
+
+    li .mathjax-block,
+    li p {
+      margin: 0.5rem 0px;
+    }
+
+    li blockquote {
+      margin: 1rem 0px;
+    }
+
+    li {
+      margin: 0px;
+      position: relative;
+    }
+
+    blockquote> :last-child {
+      margin-bottom: 0px;
+    }
+
+    blockquote> :first-child,
+    li> :first-child {
+      margin-top: 0px;
+    }
+
+    .footnotes-area {
+      color: rgb(136, 136, 136);
+      margin-top: 0.714rem;
+      padding-bottom: 0.143rem;
+      white-space: normal;
+    }
+
+    #write .footnote-line {
+      white-space: pre-wrap;
+    }
+
+    @media print {
+
+      body,
+      html {
+        border: 1px solid transparent;
+        height: 99%;
+        break-after: avoid;
+        break-before: avoid;
+        font-variant-ligatures: no-common-ligatures;
+      }
+
+      #write {
+        margin-top: 0px;
+        padding-top: 0px;
+        border-color: transparent !important;
+      }
+
+      .typora-export * {
+        -webkit-print-color-adjust: exact;
+      }
+
+      .typora-export #write {
+        break-after: avoid;
+      }
+
+      .typora-export #write::after {
+        height: 0px;
+      }
+
+      .is-mac table {
+        break-inside: avoid;
+      }
+    }
+
+    .footnote-line {
+      margin-top: 0.714em;
+      font-size: 0.7em;
+    }
+
+    a img,
+    img a {
+      cursor: pointer;
+    }
+
+    pre.md-meta-block {
+      font-size: 0.8rem;
+      min-height: 0.8rem;
+      white-space: pre-wrap;
+      background: rgb(204, 204, 204);
+      display: block;
+      overflow-x: hidden;
+    }
+
+    p>.md-image:only-child:not(.md-img-error) img,
+    p>img:only-child {
+      display: block;
+      margin: auto;
+    }
+
+    #write.first-line-indent p>.md-image:only-child:not(.md-img-error) img {
+      left: -2em;
+      position: relative;
+    }
+
+    p>.md-image:only-child {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #write .MathJax_Display {
+      margin: 0.8em 0px 0px;
+    }
+
+    .md-math-block {
+      width: 100%;
+    }
+
+    .md-math-block:not(:empty)::after {
+      display: none;
+    }
+
+    .MathJax_ref {
+      fill: currentcolor;
+    }
+
+    [contenteditable="true"]:active,
+    [contenteditable="true"]:focus,
+    [contenteditable="false"]:active,
+    [contenteditable="false"]:focus {
+      outline: 0px;
+      box-shadow: none;
+    }
+
+    .md-task-list-item {
+      position: relative;
+      list-style-type: none;
+    }
+
+    .task-list-item.md-task-list-item {
+      padding-left: 0px;
+    }
+
+    .md-task-list-item>input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin-left: -1.2em;
+      margin-top: calc(1em - 10px);
+      border: none;
+    }
+
+    .math {
+      font-size: 1rem;
+    }
+
+    .md-toc {
+      min-height: 3.58rem;
+      position: relative;
+      font-size: 0.9rem;
+      border-radius: 10px;
+    }
+
+    .md-toc-content {
+      position: relative;
+      margin-left: 0px;
+    }
+
+    .md-toc-content::after,
+    .md-toc::after {
+      display: none;
+    }
+
+    .md-toc-item {
+      display: block;
+      color: rgb(65, 131, 196);
+    }
+
+    .md-toc-item a {
+      text-decoration: none;
+    }
+
+    .md-toc-inner:hover {
+      text-decoration: underline;
+    }
+
+    .md-toc-inner {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .md-toc-h1 .md-toc-inner {
+      margin-left: 0px;
+      font-weight: 700;
+    }
+
+    .md-toc-h2 .md-toc-inner {
+      margin-left: 2em;
+    }
+
+    .md-toc-h3 .md-toc-inner {
+      margin-left: 4em;
+    }
+
+    .md-toc-h4 .md-toc-inner {
+      margin-left: 6em;
+    }
+
+    .md-toc-h5 .md-toc-inner {
+      margin-left: 8em;
+    }
+
+    .md-toc-h6 .md-toc-inner {
+      margin-left: 10em;
+    }
+
+    @media screen and (max-width: 48em) {
+      .md-toc-h3 .md-toc-inner {
+        margin-left: 3.5em;
+      }
+
+      .md-toc-h4 .md-toc-inner {
+        margin-left: 5em;
+      }
+
+      .md-toc-h5 .md-toc-inner {
+        margin-left: 6.5em;
+      }
+
+      .md-toc-h6 .md-toc-inner {
+        margin-left: 8em;
+      }
+    }
+
+    a.md-toc-inner {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    .footnote-line a:not(.reversefootnote) {
+      color: inherit;
+    }
+
+    .md-attr {
+      display: none;
+    }
+
+    .md-fn-count::after {
+      content: ".";
+    }
+
+    code,
+    pre,
+    samp,
+    tt {
+      font-family: var(--monospace);
+    }
+
+    kbd {
+      margin: 0px 0.1em;
+      padding: 0.1em 0.6em;
+      font-size: 0.8em;
+      color: rgb(36, 39, 41);
+      background: rgb(255, 255, 255);
+      border: 1px solid rgb(173, 179, 185);
+      border-radius: 3px;
+      box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+
+    .md-comment {
+      color: rgb(162, 127, 3);
+      opacity: 0.8;
+      font-family: var(--monospace);
+    }
+
+    code {
+      text-align: left;
+      vertical-align: initial;
+    }
+
+    a.md-print-anchor {
+      white-space: pre !important;
+      border-width: initial !important;
+      border-style: none !important;
+      border-color: initial !important;
+      display: inline-block !important;
+      position: absolute !important;
+      width: 1px !important;
+      right: 0px !important;
+      outline: 0px !important;
+      background: 0px 0px !important;
+      text-decoration: initial !important;
+      text-shadow: initial !important;
+    }
+
+    .md-inline-math .MathJax_SVG .noError {
+      display: none !important;
+    }
+
+    .html-for-mac .inline-math-svg .MathJax_SVG {
+      vertical-align: 0.2px;
+    }
+
+    .md-math-block .MathJax_SVG_Display {
+      text-align: center;
+      margin: 0px;
+      position: relative;
+      text-indent: 0px;
+      max-width: none;
+      max-height: none;
+      min-height: 0px;
+      min-width: 100%;
+      width: auto;
+      overflow-y: hidden;
+      display: block !important;
+    }
+
+    .MathJax_SVG_Display,
+    .md-inline-math .MathJax_SVG_Display {
+      width: auto;
+      margin: inherit;
+      display: inline-block !important;
+    }
+
+    .MathJax_SVG .MJX-monospace {
+      font-family: var(--monospace);
+    }
+
+    .MathJax_SVG .MJX-sans-serif {
+      font-family: sans-serif;
+    }
+
+    .MathJax_SVG {
+      display: inline;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      zoom: 90%;
+      text-indent: 0px;
+      text-align: left;
+      text-transform: none;
+      letter-spacing: normal;
+      word-spacing: normal;
+      overflow-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      direction: ltr;
+      max-width: none;
+      max-height: none;
+      min-width: 0px;
+      min-height: 0px;
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .MathJax_SVG * {
+      transition: none 0s ease 0s;
+    }
+
+    .MathJax_SVG_Display svg {
+      vertical-align: middle !important;
+      margin-bottom: 0px !important;
+      margin-top: 0px !important;
+    }
+
+    .os-windows.monocolor-emoji .md-emoji {
+      font-family: "Segoe UI Symbol", sans-serif;
+    }
+
+    .md-diagram-panel>svg {
+      max-width: 100%;
+    }
+
+    [lang="flow"] svg,
+    [lang="mermaid"] svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    [lang="mermaid"] .node text {
+      font-size: 1rem;
+    }
+
+    table tr th {
+      border-bottom: 0px;
+    }
+
+    video {
+      max-width: 100%;
+      display: block;
+      margin: 0px auto;
+    }
+
+    iframe {
+      max-width: 100%;
+      width: 100%;
+      border: none;
+    }
+
+    .highlight td,
+    .highlight tr {
+      border: 0px;
+    }
+
+    mark {
+      background: rgb(255, 255, 0);
+      color: rgb(0, 0, 0);
+    }
+
+    .md-html-inline .md-plain,
+    .md-html-inline strong,
+    mark .md-inline-math,
+    mark strong {
+      color: inherit;
+    }
+
+    mark .md-meta {
+      color: rgb(0, 0, 0);
+      opacity: 0.3 !important;
+    }
+
+    @media print {
+
+      .typora-export h1,
+      .typora-export h2,
+      .typora-export h3,
+      .typora-export h4,
+      .typora-export h5,
+      .typora-export h6 {
+        break-inside: avoid;
+      }
+    }
+
+    .md-diagram-panel .messageText {
+      stroke: none !important;
+    }
+
+    .md-diagram-panel .start-state {
+      fill: var(--node-fill);
+    }
+
+    .md-diagram-panel .edgeLabel rect {
+      opacity: 1 !important;
+    }
+
+    .md-require-zoom-fix foreignobject {
+      font-size: var(--mermaid-font-zoom);
+    }
 
 
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
+    :root {
+      --side-bar-bg-color: #fafafa;
+      --control-text-color: #777;
+    }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+    @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-regular - latin-ext_latin */
+    /* open-sans-italic - latin-ext_latin */
     /* open-sans-700 - latin-ext_latin */
     /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-}
+    html {
+      font-size: 16px;
+    }
 
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
+    body {
+      font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: rgb(51, 51, 51);
+      line-height: 1.6;
+    }
 
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
+    #write {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 30px;
+      padding-bottom: 100px;
+    }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
+    @media only screen and (min-width: 1400px) {
+      #write {
+        max-width: 1024px;
+      }
+    }
 
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
+    @media only screen and (min-width: 1800px) {
+      #write {
+        max-width: 1200px;
+      }
+    }
 
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
+    #write>ul:first-child,
+    #write>ol:first-child {
+      margin-top: 30px;
+    }
 
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
+    a {
+      color: #4183C4;
+    }
 
-/*@media print {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      position: relative;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      line-height: 1.4;
+      cursor: text;
+    }
+
+    h1:hover a.anchor,
+    h2:hover a.anchor,
+    h3:hover a.anchor,
+    h4:hover a.anchor,
+    h5:hover a.anchor,
+    h6:hover a.anchor {
+      text-decoration: none;
+    }
+
+    h1 tt,
+    h1 code {
+      font-size: inherit;
+    }
+
+    h2 tt,
+    h2 code {
+      font-size: inherit;
+    }
+
+    h3 tt,
+    h3 code {
+      font-size: inherit;
+    }
+
+    h4 tt,
+    h4 code {
+      font-size: inherit;
+    }
+
+    h5 tt,
+    h5 code {
+      font-size: inherit;
+    }
+
+    h6 tt,
+    h6 code {
+      font-size: inherit;
+    }
+
+    h1 {
+      font-size: 2.25em;
+      line-height: 1.2;
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+      font-size: 1.75em;
+      line-height: 1.225;
+      border-bottom: 1px solid #eee;
+    }
+
+    /*@media print {
     .typora-export h1,
     .typora-export h2 {
         border-bottom: none;
@@ -285,270 +1021,628 @@ h2 {
     }
 }*/
 
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.43;
+    }
 
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border-top: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
+    h4 {
+      font-size: 1.25em;
+    }
 
-.CodeMirror-lines {
-    padding-left: 4px;
-}
+    h5 {
+      font-size: 1em;
+    }
 
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
+    h6 {
+      font-size: 1em;
+      color: #777;
+    }
 
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+      margin: 0.8em 0;
+    }
 
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
+    li>ol,
+    li>ul {
+      margin: 0 0;
+    }
 
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
+    hr {
+      height: 2px;
+      padding: 0;
+      margin: 16px 0;
+      background-color: #e7e7e7;
+      border: 0 none;
+      overflow: hidden;
+      box-sizing: content-box;
+    }
+
+    li p.first {
+      display: inline-block;
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+
+    ul:first-child,
+    ol:first-child {
+      margin-top: 0;
+    }
+
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0;
+    }
+
+    blockquote {
+      border-left: 4px solid #dfe2e5;
+      padding: 0 15px;
+      color: #777777;
+    }
+
+    blockquote blockquote {
+      padding-right: 0;
+    }
+
+    table {
+      padding: 0;
+      word-break: initial;
+    }
+
+    table tr {
+      border-top: 1px solid #dfe2e5;
+      margin: 0;
+      padding: 0;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+      background-color: #f8f8f8;
+    }
+
+    table th {
+      font-weight: bold;
+      border: 1px solid #dfe2e5;
+      border-bottom: 0;
+      margin: 0;
+      padding: 6px 13px;
+    }
+
+    table td {
+      border: 1px solid #dfe2e5;
+      margin: 0;
+      padding: 6px 13px;
+    }
+
+    table th:first-child,
+    table td:first-child {
+      margin-top: 0;
+    }
+
+    table th:last-child,
+    table td:last-child {
+      margin-bottom: 0;
+    }
+
+    .CodeMirror-lines {
+      padding-left: 4px;
+    }
+
+    .code-tooltip {
+      box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+      border-top: 1px solid #eef2f2;
+    }
+
+    .md-fences,
+    code,
+    tt {
+      border: 1px solid #e7eaed;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+      padding: 0;
+      padding: 2px 4px 0px 4px;
+      font-size: 0.9em;
+    }
+
+    code {
+      background-color: #f3f4f4;
+      padding: 0 2px 0 2px;
+    }
+
+    .md-fences {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
 
 
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
+    .md-task-list-item>input {
+      margin-left: -1.3em;
+    }
 
-@media print {
-    html {
+    @media print {
+      html {
         font-size: 13px;
-    }
-    table,
-    pre {
+      }
+
+      table,
+      pre {
         page-break-inside: avoid;
-    }
-    pre {
+      }
+
+      pre {
         word-wrap: break-word;
+      }
     }
-}
 
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
+    .md-fences {
+      background-color: #f8f8f8;
+    }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
+    #write pre.md-meta-block {
+      padding: 1rem;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f7f7f7;
+      border: 0;
+      border-radius: 3px;
+      color: #777777;
+      margin-top: 0 !important;
+    }
 
-.md-mathjax-midline {
-    background: #fafafa;
-}
+    .mathjax-block>.code-tooltip {
+      bottom: .375rem;
+    }
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
+    .md-mathjax-midline {
+      background: #fafafa;
+    }
 
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
+    #write>h3.md-focus:before {
+      left: -1.5625rem;
+      top: .375rem;
+    }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
+    #write>h4.md-focus:before {
+      left: -1.5625rem;
+      top: .285714286rem;
+    }
 
-.sidebar-tabs {
-    border-bottom: none;
-}
+    #write>h5.md-focus:before {
+      left: -1.5625rem;
+      top: .285714286rem;
+    }
 
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
+    #write>h6.md-focus:before {
+      left: -1.5625rem;
+      top: .285714286rem;
+    }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
+    .md-image>.md-meta {
+      /*border: 1px solid #ddd;*/
+      border-radius: 3px;
+      padding: 2px 0px 0px 4px;
+      font-size: 0.9em;
+      color: inherit;
+    }
 
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
+    .md-tag {
+      color: #a7a7a7;
+      opacity: 1;
+    }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
+    .md-toc {
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
 
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
+    .sidebar-tabs {
+      border-bottom: none;
+    }
 
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
+    #typora-quick-open {
+      border: 1px solid #ddd;
+      background-color: #f8f8f8;
+    }
 
-.md-lang {
-    color: #b4654d;
-}
+    #typora-quick-open-item {
+      background-color: #FAFAFA;
+      border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+      border-style: solid;
+      border-width: 1px;
+    }
 
-.html-for-mac .context-menu {
-    --item-hover-bg-color: #E6F0FE;
-}
+    /** focus mode */
+    .on-focus-mode blockquote {
+      border-left-color: rgba(85, 85, 85, 0.12);
+    }
 
-#md-notification .btn {
-    border: 0;
-}
+    header,
+    .context-menu,
+    .megamenu-content,
+    footer {
+      font-family: "Segoe UI", "Arial", sans-serif;
+    }
 
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-}
+    .file-node-content:hover .file-node-icon,
+    .file-node-content:hover .file-node-open-state {
+      visibility: visible;
+    }
 
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
+    .mac-seamless-mode #typora-sidebar {
+      background-color: #fafafa;
+      background-color: var(--side-bar-bg-color);
+    }
 
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
+    .md-lang {
+      color: #b4654d;
+    }
 
- :root {--mermaid-font-zoom:1.25em ;} 
-</style>
+    .html-for-mac .context-menu {
+      --item-hover-bg-color: #E6F0FE;
+    }
+
+    #md-notification .btn {
+      border: 0;
+    }
+
+    .dropdown-menu .divider {
+      border-color: #e5e5e5;
+    }
+
+    .ty-preferences .window-content {
+      background-color: #fafafa;
+    }
+
+    .ty-preferences .nav-group-item.active {
+      color: white;
+      background: #999;
+    }
+
+    :root {
+      --mermaid-font-zoom: 1.25em;
+    }
+  </style>
 </head>
+
 <body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="python自动化办公社区的资源仓库" class="md-header-anchor"></a><span>Python自动化办公社区的资源仓库</span></h1><figure><table><thead><tr><th><span>更新版本</span></th><th><span>编辑</span></th><th><span>更新时间</span></th><th><span>备注</span></th></tr></thead><tbody><tr><td><span>v2.0</span></td><td><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>兆锋</span></a></td><td><span>2021-1-2</span></td><td><span>资源分类+课程推荐</span></td></tr><tr><td><span>v1.0</span></td><td><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>兆锋</span></a></td><td><span>2020-12-29</span></td><td><span>资源汇总</span></td></tr></tbody></table></figure><p>&nbsp;</p><blockquote><p><span>📱我们的Python自动化办公社区共有10+个平台账号（</span><a href='https://space.bilibili.com/259649365'><span>B站</span></a><span>、 </span><a href='http://t.cn/A6Gkrbzw'><span>公众号</span></a><span>、 </span><a href='https://weibo.com/u/7411061007'><span>微博</span></a><span>、</span><a href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a><span>，等等），</span></p><p><span>微信🈲禁止添加外部超链接，为了方便大家查看，特将资源汇总于此~</span></p></blockquote><blockquote><p><span>下拉可查看全部资源，点击关注，即可展开全文哦~💖</span></p></blockquote><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#python自动化办公社区的资源仓库">Python自动化办公社区的资源仓库</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n28"><a class="md-toc-inner" href="#0写在前面">0、写在前面</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n57"><a class="md-toc-inner" href="#1资源汇总-按平台分类">1、资源汇总-按平台分类</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n78"><a class="md-toc-inner" href="#2资源汇总-按功能分类">2、资源汇总-按功能分类</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#①python入门自动化办公">①Python入门&amp;自动化办公</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#②excel专项">②Excel专项</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n130"><a class="md-toc-inner" href="#③python爬虫">③Python爬虫</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n139"><a class="md-toc-inner" href="#④数据分析数据可视化">④数据分析&amp;数据可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n156"><a class="md-toc-inner" href="#⑤聊天机器人微信机器人">⑤聊天机器人&amp;微信机器人</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n174"><a class="md-toc-inner" href="#⑥心理分析httpsmpweixinqqcomssacpaqbsop2au6f7f4mqga">⑥心理分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n181"><a class="md-toc-inner" href="#⑦更多精彩">⑦更多精彩</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n202"><a class="md-toc-inner" href="#3写在最后交流合作赞赏">3、写在最后/交流合作/赞赏</a></span></p></div><p>&nbsp;</p><h1><a name="0写在前面" class="md-header-anchor"></a><span>0、写在前面</span></h1><p><span># </span></p><p><span>这里是法学院毕业的Python程序员兆锋，这里有我的🚀</span><a href='https://gitee.com/zhaofeng092/python_auto_office'><span>全部资源仓库</span></a><span>，</span></p><p><span>下面内容，根据资源种类不同，进行了分类，请大家按需获取使用~</span></p><p><span>| 🎯  </span><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>关于作者</span></a><span>   |  📚 </span><a href='http://t.cn/A6Gkrbzw'><span>社区公众号</span></a><span>   |  🚸 </span><a href='https://mp.weixin.qq.com/s/6cR5fMSCtdI5sJdWiDwhOA'><span>社区交流群</span></a><span>   |</span>
-<span>| ---- | ---- | ---- |</span></p><blockquote><p><span>首先推荐3套经典的学习课程，在各自领域都是排名第一的课程哦~</span></p></blockquote><figure><table><thead><tr><th><span>推荐理由</span></th><th><span>课程链接</span></th><th><span>走心备注</span></th></tr></thead><tbody><tr><td><span>帮我找到Python工作的，我用过最好的Python入门课</span></td><td><span>🆒</span><a href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'><span>52讲轻松搞定网络爬虫</span></a></td><td><span>如果你想学爬虫，听这一套足够了，不用听其它课程了。</span></td></tr><tr><td><span>小程序，是目前仅次于Python的实用领域，而且入门极简单</span></td><td><span>🉑</span><a href='https://mp.weixin.qq.com/s/Zs9KrzSonUfKPU4JFgEFPg'><span>腾讯官方：微信小程序开发</span></a></td><td><span>这是腾讯小程序团队自己出的课程，想学小程序的话，还有比这更好的课吗？没了吧~</span></td></tr><tr><td><span>我的原创自动化办公教程，配套资料齐全</span></td><td><span>🏆</span><a href='https://www.bilibili.com/video/BV12K411N7nx'><span>Python自动化办公精讲</span></a></td><td><span>2020年8月-12月，播放量超过10万</span></td></tr><tr><td><span>找到自己的优势，再努力，会走的更快~你说呢？</span></td><td><span>🏃</span><a href='https://mp.weixin.qq.com/s/OKQYnpnnSmUyl33-WVak3g'><span>职业优势测试</span></a></td><td><span>找到自己的优势，巩固优势，并用优势取胜，这个【田忌赛马】的故事，从上小学开始就明白。但是长大后，很多人却把时间花在寻找并改正自己的缺点上。我觉得这是一个悲哀。</span></td></tr></tbody></table></figure><p>&nbsp;</p><h1><a name="1资源汇总-按平台分类" class="md-header-anchor"></a><span>1、资源汇总-按平台分类</span></h1><p>&nbsp;</p><blockquote><p><span>这种方式获取全面，优先查看</span><a href='https://space.bilibili.com/259649365'><span>B站</span></a><span>和 </span><a href='http://t.cn/A6Gkrbzw'><span>公众号</span></a><span>，宝藏内容在</span><a href='https://www.acfun.cn/u/35901274'><span>A站</span></a><span>和</span><a href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a></p></blockquote><figure><table><thead><tr><th><span>视频</span></th><th><span>综合</span></th><th><span>IT</span></th><th><span>生活</span></th></tr></thead><tbody><tr><td><span>🚗 </span><a href='https://space.bilibili.com/259649365'><span>B站</span></a></td><td><a href='https://www.zhihu.com/people/a-fei-2020'><span>知乎</span></a></td><td><a href='https://my.oschina.net/u/3888978'><span>开源中国</span></a><span>、</span><a href='https://www.jianshu.com/u/b84b890b3431'><span>简书</span></a><span>、</span><a href='https://juejin.cn/user/87612266651021'><span>掘金</span></a></td><td><span>⛳ </span><a href='https://weibo.com/u/7411061007'><span>微博</span></a></td></tr><tr><td><a href='https://www.acfun.cn/u/35901274'><span>A站</span></a></td><td><span>🚀 </span><a href='http://t.cn/A6Gkrbzw'><span>公众号</span></a></td><td><a href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a><span>、</span><a href='https://github.com/zhaofeng092/python_auto_office'><span>Github</span></a><span>、</span><a href='https://gitee.com/zhaofeng092/python_auto_office'><span>Gitee</span></a></td><td><span>📲 我的邮箱：</span><a href='mailto:1529577833@qq.com' target='_blank' class='url'>1529577833@qq.com</a></td></tr></tbody></table></figure><p>&nbsp;</p><h1><a name="2资源汇总-按功能分类" class="md-header-anchor"></a><span>2、资源汇总-按功能分类</span></h1><blockquote><p><span>这种方式不全部罗列，只列举</span><a href='http://t.cn/A6Gkrbzw'><span>高赞/高收藏/高阅读</span></a><span>内容，如需探索更多，请点击上方平台</span></p></blockquote><h3><a name="①python入门自动化办公" class="md-header-anchor"></a><span>①Python入门&amp;自动化办公</span></h3><ul><li><p><span>视频</span></p><ul><li><span>👉</span><a href='https://www.bilibili.com/video/BV12K411N7nx'><span>2020年-Python自动化办公（可能是B站内容最全的！有源代码 ，适合小白~）</span></a></li><li><a href='https://www.bilibili.com/video/BV1Ty4y1D7wZ'><span>2021年-【高级应用】Python自动化办公</span></a></li><li><a href='https://www.acfun.cn/v/ac20463077'><span>花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)</span></a></li><li><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486060&amp;idx=1&amp;sn=d659e07f6f720130e5e58ba43be4cb4d&amp;chksm=eaf6ab59dd81224f148f798639c5995a8ab24620a00869231598ee31249e7f827d3b1055f5e3#rd'><span>推荐5个Excel自动化办公免费学习资源~（数据分析、Python、VBA等）</span></a></li><li><a href='https://mp.weixin.qq.com/s/x-OgceFo2TuILQMUduCmZw'><span>推荐5个Python金融免费学习资源</span></a></li><li><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486237&amp;idx=1&amp;sn=27659d6e6703d3a7a2c229dccba75e0a&amp;chksm=eaf6aa28dd81233ea76c79537912fd334ea21d75dced913b243165eb5e3772b2b04661e91e6f#rd'><span>学了Python，可以做哪些兼职月入过万？</span></a></li></ul></li><li><p><span>文字：</span></p><ul><li><p><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486593&amp;idx=1&amp;sn=b4d9226cb02272ae014561692ff9fd0b&amp;chksm=eaf6adb4dd8124a2af3525fb73e6dc6f7cc85b9c5bd5efce220c5a8f293d1b88352706828b05#rd'><span>Python必读好书，这9本份量十足~</span></a></p></li><li><p><span>👉</span><a href='https://mp.weixin.qq.com/s/k4opXSWsgjBGpu8aUVetSw'><span>47页PPT：如何利用Python进行自动化办公？</span></a></p></li><li><p><span>🍓</span><a href='https://mp.weixin.qq.com/s/J4zNQ1heLmZyQBGremqbPQ'><span>【福利】10本Python入门到进阶的电子书，15套Python视频教程~</span></a></p></li><li><p><a href='https://mp.weixin.qq.com/s/2xJ_OjGNCN15B1WlN6O_GQ'><span>Python经典练习题100道（附链接）</span></a></p></li><li><p><span>👉</span><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247488665&amp;idx=1&amp;sn=e227f4a916cb7149b8a7bad8ff952bb1&amp;chksm=eaf6b5acdd813cbae215fbc5d0c5ad92db762be876c8453667e6f6e224985b35058fff99f79f#rd'><span>买到回家的火车票了吗？用Python免费在12306刷票，还不快来试试~</span></a></p></li><li><p><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247487609&amp;idx=1&amp;sn=3b6adaf948b4480dc0cd76afcd044248&amp;chksm=eaf6b14cdd81385a91d0db36243aae7df096816a376acc9632e1e6483e197ed2b555ca748bde#rd'><span>你以为打上马赛克就安全了吗？用Python一键还原，了解一下？</span></a></p></li><li><p><a href='https://mp.weixin.qq.com/s/FgX-p3pF-_e3e9ZBjM3nEQ'><span>成为一名优秀程序员的101个小建议</span></a></p><p>&nbsp;</p></li></ul><p>&nbsp;</p></li></ul><h3><a name="②excel专项" class="md-header-anchor"></a><span>②Excel专项</span></h3><ul><li><span>👉</span><a href='https://www.bilibili.com/video/BV1hk4y1C73S'><span>Python自动化办公--Pandas玩转Excel（全30集）</span></a></li><li><a href='https://www.bilibili.com/video/BV195411t7vN'><span>【超详细】EXCEL数据分析（分析、公式、函数、可视化）</span></a></li><li><span>👉</span><a href='https://www.acfun.cn/v/ac21081575'><span>Excel高效学习班（完结 · 附资料）</span></a></li><li><a href='https://mp.weixin.qq.com/s/a7sV6d-UfIqSYxxgyTr_8A'><span>Excel从入门到精通（最新，Excel2019版，附资料）</span></a></li><li><span>推荐教材《Office2019 办公应用三合一（Word Excel PPT）》，复制到淘宝打开：8.0￥59M0cqiSDTj￥</span></li></ul><p>&nbsp;</p><h3><a name="③python爬虫" class="md-header-anchor"></a><span>③Python爬虫</span></h3><ul><li><a href='https://www.bilibili.com/video/BV15E411P7ey?p=1'><span>Python爬虫案例实战（2020 · 周更）</span></a></li><li><a href='https://www.acfun.cn/v/ac20437401'><span>2020年Python爬虫全套课程（学完可做项目）</span></a></li><li><span>🆒</span><a href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'><span>52讲轻松搞定网络爬虫</span></a></li></ul><p>&nbsp;</p><h3><a name="④数据分析数据可视化" class="md-header-anchor"></a><span>④数据分析&amp;数据可视化</span></h3><ul><li><p><span>🔥</span><a href='https://www.acfun.cn/v/ac19843284'><span>七周成为数据分析师</span></a></p></li><li><p><a href='https://www.acfun.cn/v/ac19838235'><span>Power BI教程_商业数据可视化</span></a></p></li><li><p><span>🉑</span><a href='http://t.cn/A6qlcSCV'><span>数据分析和可视化精讲</span></a></p></li><li><p><a href='https://www.acfun.cn/v/ac20848856'><span>掌握高效数据可视化技法（完结）</span></a></p></li><li><p><a href='https://www.bilibili.com/video/BV1Kz4y1r76w'><span>内幕：报价上万的大屏数据可视化，成本只有10分钟？（附18套可视化模板）</span></a></p></li><li><p><a href='https://www.bilibili.com/video/BV1zi4y1t7YU'><span>手摸手搭建python数据可视化平台（2020 · 周更）</span></a></p></li><li><p><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486878&amp;idx=1&amp;sn=3515dcfefce834965458906dc9ce2880&amp;chksm=eaf6acabdd8125bdefd77bf34c50b9afa916df9aec0652fe9d87ed78e1230f7d99da4edbddbc#rd'><span>耗子尾汁！各行业都极其加分的数据分析，到底应该怎么学？</span></a></p><p>&nbsp;</p></li></ul><h3><a name="⑤聊天机器人微信机器人" class="md-header-anchor"></a><span>⑤聊天机器人&amp;微信机器人</span></h3><ul><li><p><a href='https://mp.weixin.qq.com/s/8ZdQtc2zlkUVG_g8__RlJA'><span>腾讯AI聊天机器人源代码，复制粘贴就能聊</span></a></p></li><li><p><span>💖</span><a href='https://mp.weixin.qq.com/s/KarWOWBxpx2x6V02K2sPHQ'><span>彩虹屁机器人 · 源代码</span></a></p></li><li><p><a href='http://t.cn/A6qaFUZw'><span>彩虹屁机器人 + AI · 全套教程</span></a></p></li><li><p><a href='https://mp.weixin.qq.com/s/xT3TSZTPH4O7uDMuJBElgw'><span>部署机器人</span></a><span>(以下两家性能无差别)：</span></p><ul><li><a href='http://t.cn/A6qV0C42'><span>阿里云（市场占有率高）</span></a></li><li><a href='https://curl.qcloud.com/HBu2xulk'><span>腾讯云（方便在微信操作）</span></a></li></ul></li><li><p><a href='https://www.bilibili.com/video/BV1t54y127y3'><span>Django：机器人如何部署在服务器上？</span></a></p></li></ul><p>&nbsp;</p><h3><a name="⑥心理分析httpsmpweixinqqcomssacpaqbsop2au6f7f4mqga" class="md-header-anchor"></a><span>⑥</span><a href='https://mp.weixin.qq.com/s/SaCpaqbsOp2AU6f7F4MqgA'><span>心理分析</span></a></h3><ul><li><span>👉</span><a href='https://www.bilibili.com/video/BV1mi4y1j7DF'><span>武志红：成为你自己（2020 · 全90讲）</span></a></li><li><a href='https://www.acfun.cn/v/ac20499334'><span>荣格心理分析入门：认识你自己【全】</span></a></li></ul><p>&nbsp;</p><h3><a name="⑦更多精彩" class="md-header-anchor"></a><span>⑦更多精彩</span></h3><ul><li><a href='https://www.acfun.cn/v/ac18888954'><span>Google工程师：TensorFlow2.0入门到进阶</span></a></li><li><span>🔨</span><a href='https://www.acfun.cn/v/ac21081272'><span>Vue高度还原饿了么APP（完结 · 附源码）</span></a></li><li><a href='https://www.bilibili.com/video/BV1zi4y1V73n'><span>别说程序员不懂浪漫，用代码一样可以花式表白~</span></a></li><li><a href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247487179&amp;idx=1&amp;sn=2246bc53f52d738001538d9ffff9a14a&amp;chksm=eaf6affedd8126e85f389c4e9fcd1ba0b6a5f07364ec786bfc7e82c1e8ef4ec003e56484e56f#rd'><span>用上这12个Chrome扩展功能，每年省出1个年假的时间~</span></a></li><li><a href='https://mp.weixin.qq.com/s/ySzv7ychUjof0lhFjSjS7w'><span>用代码写了一段银河</span></a></li><li><a href='https://mp.weixin.qq.com/s/QFlh0OB-niHupylvTPC24g'><span>早知道这些查询数据的API，我还学什么爬虫啊.doc</span></a></li><li><a href='https://mp.weixin.qq.com/s/szHwiXrC6Xl1gsjEPm6APw'><span>一个开源工具箱，帮你找出被偷走的个人数据~！</span></a></li><li><a href='https://mp.weixin.qq.com/s/hVR1NDcxc3sh6v6k4g1QZQ'><span>用 Python 修改微信（支付宝）运动步数，轻松 TOP1</span></a></li><li><a href='https://mp.weixin.qq.com/s/SaCpaqbsOp2AU6f7F4MqgA'><span>自从我用了这 7 个神奇的办公软件，效率提高了，人也精神了</span></a></li></ul><p>&nbsp;</p><h1><a name="3写在最后交流合作赞赏" class="md-header-anchor"></a><span>3、写在最后/交流合作/赞赏</span></h1><p><span>资料有很多了，只有付出时间和行动去学习和练习，才能真正地学以致用。</span></p><p><span>从法学院毕业后选择了程序员这一行的时候，我是全凭热爱；但是我也渐渐发现热爱没法当饭吃。🎯  </span><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>关于我</span></a><span> </span></p><p><span>为了更好的长久的掌握编程这门技术，我也一直在探索适合自己的方向，不断学习新的知识。</span></p><p><span>如果你也正在IT这条路上探索，欢迎一路同行，</span></p><ul><li><span>欢迎在📋</span><a href='http://t.cn/A6qTvrFK'><span>CSDN的评论区</span></a><span>留言交流您的问题；</span></li><li><span>也欢迎点击加入：🚸 </span><a href='https://mp.weixin.qq.com/s/6cR5fMSCtdI5sJdWiDwhOA'><span>我的交流群</span></a><span>  ；</span></li><li><span>如果有私人问题/交流合作，欢迎联系📲我的邮箱：</span><a href='mailto:1529577833@qq.com' target='_blank' class='url'>1529577833@qq.com</a></li></ul><p><span>最后，整理分享知识不易，如果资料对你帮助，感谢赞赏支持哟~💖</span><a href='https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E8%B4%A6%E5%8F%B7%E5%85%B1%E7%94%A8%E8%B5%84%E6%BA%90/image/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg'><span>点击：打开赞赏码</span></a></p><p>&nbsp;</p></div>
+  <div id='write' class=''>
+    <h1><a name="python自动化办公社区的资源仓库" class="md-header-anchor"></a><span>Python自动化办公社区的资源仓库</span></h1>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th><span>更新版本</span></th>
+            <th><span>编辑</span></th>
+            <th><span>更新时间</span></th>
+            <th><span>备注</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>v2.0</span></td>
+            <td><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>兆锋</span></a></td>
+            <td><span>2021-1-2</span></td>
+            <td><span>资源分类+课程推荐</span></td>
+          </tr>
+          <tr>
+            <td><span>v1.0</span></td>
+            <td><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>兆锋</span></a></td>
+            <td><span>2020-12-29</span></td>
+            <td><span>资源汇总</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <p>&nbsp;</p>
+    <blockquote>
+      <p><span>📱我们的Python自动化办公社区共有10+个平台账号（</span><a
+          href='https://space.bilibili.com/259649365'><span>B站</span></a><span>、 </span><a
+          href='http://t.cn/A6Gkrbzw'><span>公众号</span></a><span>、 </span><a
+          href='https://weibo.com/u/7411061007'><span>微博</span></a><span>、</span><a
+          href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a><span>，等等），</span></p>
+      <p><span>微信🈲禁止添加外部超链接，为了方便大家查看，特将资源汇总于此~</span></p>
+    </blockquote>
+    <blockquote>
+      <p><span>下拉可查看全部资源，点击关注，即可展开全文哦~💖</span></p>
+    </blockquote>
+    <p>&nbsp;</p>
+    <div class='md-toc' mdtype='toc'>
+      <p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a
+            class="md-toc-inner" href="#python自动化办公社区的资源仓库">Python自动化办公社区的资源仓库</a></span><span role="listitem"
+          class="md-toc-item md-toc-h1" data-ref="n28"><a class="md-toc-inner" href="#0写在前面">0、写在前面</a></span><span
+          role="listitem" class="md-toc-item md-toc-h1" data-ref="n57"><a class="md-toc-inner"
+            href="#1资源汇总-按平台分类">1、资源汇总-按平台分类</a></span><span role="listitem" class="md-toc-item md-toc-h1"
+          data-ref="n78"><a class="md-toc-inner" href="#2资源汇总-按功能分类">2、资源汇总-按功能分类</a></span><span role="listitem"
+          class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner"
+            href="#①python入门自动化办公">①Python入门&amp;自动化办公</a></span><span role="listitem" class="md-toc-item md-toc-h3"
+          data-ref="n117"><a class="md-toc-inner" href="#②excel专项">②Excel专项</a></span><span role="listitem"
+          class="md-toc-item md-toc-h3" data-ref="n130"><a class="md-toc-inner"
+            href="#③python爬虫">③Python爬虫</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n139"><a
+            class="md-toc-inner" href="#④数据分析数据可视化">④数据分析&amp;数据可视化</a></span><span role="listitem"
+          class="md-toc-item md-toc-h3" data-ref="n156"><a class="md-toc-inner"
+            href="#⑤聊天机器人微信机器人">⑤聊天机器人&amp;微信机器人</a></span><span role="listitem" class="md-toc-item md-toc-h3"
+          data-ref="n174"><a class="md-toc-inner"
+            href="#⑥心理分析httpsmpweixinqqcomssacpaqbsop2au6f7f4mqga">⑥心理分析</a></span><span role="listitem"
+          class="md-toc-item md-toc-h3" data-ref="n181"><a class="md-toc-inner" href="#⑦更多精彩">⑦更多精彩</a></span><span
+          role="listitem" class="md-toc-item md-toc-h1" data-ref="n202"><a class="md-toc-inner"
+            href="#3写在最后交流合作赞赏">3、写在最后/交流合作/赞赏</a></span></p>
+    </div>
+    <p>&nbsp;</p>
+    <h1><a name="0写在前面" class="md-header-anchor"></a><span>0、写在前面</span></h1>
+    <p><span># </span></p>
+    <p><span>这里是法学院毕业的Python程序员兆锋，这里有我的🚀</span><a
+        href='https://gitee.com/zhaofeng092/python_auto_office'><span>全部资源仓库</span></a><span>，</span></p>
+    <p><span>下面内容，根据资源种类不同，进行了分类，请大家按需获取使用~</span></p>
+    <p><span>| 🎯 </span><a href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>关于作者</span></a><span> | 📚
+      </span><a href='http://t.cn/A6Gkrbzw'><span>社区公众号</span></a><span> | 🚸 </span><a
+        href='https://mp.weixin.qq.com/s/6cR5fMSCtdI5sJdWiDwhOA'><span>社区交流群</span></a><span> |</span>
+      <span>| ---- | ---- | ---- |</span>
+    </p>
+    <blockquote>
+      <p><span>首先推荐3套经典的学习课程，在各自领域都是排名第一的课程哦~</span></p>
+    </blockquote>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th><span>推荐理由</span></th>
+            <th><span>课程链接</span></th>
+            <th><span>走心备注</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>帮我找到Python工作的，我用过最好的Python入门课</span></td>
+            <td><span>🆒</span><a href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'><span>52讲轻松搞定网络爬虫</span></a>
+            </td>
+            <td><span>如果你想学爬虫，听这一套足够了，不用听其它课程了。</span></td>
+          </tr>
+          <tr>
+            <td><span>小程序，是目前仅次于Python的实用领域，而且入门极简单</span></td>
+            <td><span>🉑</span><a href='https://mp.weixin.qq.com/s/Zs9KrzSonUfKPU4JFgEFPg'><span>腾讯官方：微信小程序开发</span></a>
+            </td>
+            <td><span>这是腾讯小程序团队自己出的课程，想学小程序的话，还有比这更好的课吗？没了吧~</span></td>
+          </tr>
+          <tr>
+            <td><span>我的原创自动化办公教程，配套资料齐全</span></td>
+            <td><span>🏆</span><a href='https://www.bilibili.com/video/BV12K411N7nx'><span>Python自动化办公精讲</span></a></td>
+            <td><span>2020年8月-12月，播放量超过10万</span></td>
+          </tr>
+          <tr>
+            <td><span>找到自己的优势，再努力，会走的更快~你说呢？</span></td>
+            <td><span>🏃</span><a href='https://mp.weixin.qq.com/s/OKQYnpnnSmUyl33-WVak3g'><span>职业优势测试</span></a></td>
+            <td><span>找到自己的优势，巩固优势，并用优势取胜，这个【田忌赛马】的故事，从上小学开始就明白。但是长大后，很多人却把时间花在寻找并改正自己的缺点上。我觉得这是一个悲哀。</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <p>&nbsp;</p>
+    <h1><a name="1资源汇总-按平台分类" class="md-header-anchor"></a><span>1、资源汇总-按平台分类</span></h1>
+    <p>&nbsp;</p>
+    <blockquote>
+      <p><span>这种方式获取全面，优先查看</span><a href='https://space.bilibili.com/259649365'><span>B站</span></a><span>和 </span><a
+          href='http://t.cn/A6Gkrbzw'><span>公众号</span></a><span>，宝藏内容在</span><a
+          href='https://www.acfun.cn/u/35901274'><span>A站</span></a><span>和</span><a
+          href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a></p>
+    </blockquote>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th><span>视频</span></th>
+            <th><span>综合</span></th>
+            <th><span>IT</span></th>
+            <th><span>生活</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>🚗 </span><a href='https://space.bilibili.com/259649365'><span>B站</span></a></td>
+            <td><a href='https://www.zhihu.com/people/a-fei-2020'><span>知乎</span></a></td>
+            <td><a href='https://my.oschina.net/u/3888978'><span>开源中国</span></a><span>、</span><a
+                href='https://www.jianshu.com/u/b84b890b3431'><span>简书</span></a><span>、</span><a
+                href='https://juejin.cn/user/87612266651021'><span>掘金</span></a></td>
+            <td><span>⛳ </span><a href='https://weibo.com/u/7411061007'><span>微博</span></a></td>
+          </tr>
+          <tr>
+            <td><a href='https://www.acfun.cn/u/35901274'><span>A站</span></a></td>
+            <td><span>🚀 </span><a href='http://t.cn/A6Gkrbzw'><span>公众号</span></a></td>
+            <td><a href='https://blog.csdn.net/weixin_42321517'><span>CSDN</span></a><span>、</span><a
+                href='https://github.com/zhaofeng092/python_auto_office'><span>Github</span></a><span>、</span><a
+                href='https://gitee.com/zhaofeng092/python_auto_office'><span>Gitee</span></a></td>
+            <td><span>📲 我的邮箱：</span><a href='mailto:1529577833@qq.com' target='_blank'
+                class='url'>1529577833@qq.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <p>&nbsp;</p>
+    <h1><a name="2资源汇总-按功能分类" class="md-header-anchor"></a><span>2、资源汇总-按功能分类</span></h1>
+    <blockquote>
+      <p><span>这种方式不全部罗列，只列举</span><a
+          href='http://t.cn/A6Gkrbzw'><span>高赞/高收藏/高阅读</span></a><span>内容，如需探索更多，请点击上方平台</span></p>
+    </blockquote>
+    <h3><a name="①python入门自动化办公" class="md-header-anchor"></a><span>①Python入门&amp;自动化办公</span></h3>
+    <ul>
+      <li>
+        <p><span>视频</span></p>
+        <ul>
+          <li><span>👉</span><a
+              href='https://www.bilibili.com/video/BV12K411N7nx'><span>2020年-Python自动化办公（可能是B站内容最全的！有源代码
+                ，适合小白~）</span></a></li>
+          <li><a href='https://www.bilibili.com/video/BV1Ty4y1D7wZ'><span>2021年-【高级应用】Python自动化办公</span></a></li>
+          <li><a href='https://www.acfun.cn/v/ac20463077'><span>花了2万多买的Python教程全套，现在分享给大家，入门到精通(Python全栈开发教程)</span></a>
+          </li>
+          <li><a
+              href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486060&amp;idx=1&amp;sn=d659e07f6f720130e5e58ba43be4cb4d&amp;chksm=eaf6ab59dd81224f148f798639c5995a8ab24620a00869231598ee31249e7f827d3b1055f5e3#rd'><span>推荐5个Excel自动化办公免费学习资源~（数据分析、Python、VBA等）</span></a>
+          </li>
+          <li><a href='https://mp.weixin.qq.com/s/x-OgceFo2TuILQMUduCmZw'><span>推荐5个Python金融免费学习资源</span></a></li>
+          <li><a
+              href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486237&amp;idx=1&amp;sn=27659d6e6703d3a7a2c229dccba75e0a&amp;chksm=eaf6aa28dd81233ea76c79537912fd334ea21d75dced913b243165eb5e3772b2b04661e91e6f#rd'><span>学了Python，可以做哪些兼职月入过万？</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><span>文字：</span></p>
+        <ul>
+          <li>
+            <p><a
+                href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486593&amp;idx=1&amp;sn=b4d9226cb02272ae014561692ff9fd0b&amp;chksm=eaf6adb4dd8124a2af3525fb73e6dc6f7cc85b9c5bd5efce220c5a8f293d1b88352706828b05#rd'><span>Python必读好书，这9本份量十足~</span></a>
+            </p>
+          </li>
+          <li>
+            <p><span>👉</span><a
+                href='https://mp.weixin.qq.com/s/k4opXSWsgjBGpu8aUVetSw'><span>47页PPT：如何利用Python进行自动化办公？</span></a></p>
+          </li>
+          <li>
+            <p><span>🍓</span><a
+                href='https://mp.weixin.qq.com/s/J4zNQ1heLmZyQBGremqbPQ'><span>【福利】10本Python入门到进阶的电子书，15套Python视频教程~</span></a>
+            </p>
+          </li>
+          <li>
+            <p><a href='https://mp.weixin.qq.com/s/2xJ_OjGNCN15B1WlN6O_GQ'><span>Python经典练习题100道（附链接）</span></a></p>
+          </li>
+          <li>
+            <p><span>👉</span><a
+                href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247488665&amp;idx=1&amp;sn=e227f4a916cb7149b8a7bad8ff952bb1&amp;chksm=eaf6b5acdd813cbae215fbc5d0c5ad92db762be876c8453667e6f6e224985b35058fff99f79f#rd'><span>买到回家的火车票了吗？用Python免费在12306刷票，还不快来试试~</span></a>
+            </p>
+          </li>
+          <li>
+            <p><a
+                href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247487609&amp;idx=1&amp;sn=3b6adaf948b4480dc0cd76afcd044248&amp;chksm=eaf6b14cdd81385a91d0db36243aae7df096816a376acc9632e1e6483e197ed2b555ca748bde#rd'><span>你以为打上马赛克就安全了吗？用Python一键还原，了解一下？</span></a>
+            </p>
+          </li>
+          <li>
+            <p><a href='https://mp.weixin.qq.com/s/FgX-p3pF-_e3e9ZBjM3nEQ'><span>成为一名优秀程序员的101个小建议</span></a></p>
+            <p>&nbsp;</p>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+      </li>
+    </ul>
+    <h3><a name="②excel专项" class="md-header-anchor"></a><span>②Excel专项</span></h3>
+    <ul>
+      <li><span>👉</span><a
+          href='https://www.bilibili.com/video/BV1hk4y1C73S'><span>Python自动化办公--Pandas玩转Excel（全30集）</span></a></li>
+      <li><a href='https://www.bilibili.com/video/BV195411t7vN'><span>【超详细】EXCEL数据分析（分析、公式、函数、可视化）</span></a></li>
+      <li><span>👉</span><a href='https://www.acfun.cn/v/ac21081575'><span>Excel高效学习班（完结 · 附资料）</span></a></li>
+      <li><a href='https://mp.weixin.qq.com/s/a7sV6d-UfIqSYxxgyTr_8A'><span>Excel从入门到精通（最新，Excel2019版，附资料）</span></a>
+      </li>
+      <li><span>推荐教材《Office2019 办公应用三合一（Word Excel PPT）》，复制到淘宝打开：8.0￥59M0cqiSDTj￥</span></li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3><a name="③python爬虫" class="md-header-anchor"></a><span>③Python爬虫</span></h3>
+    <ul>
+      <li><a href='https://www.bilibili.com/video/BV15E411P7ey?p=1'><span>Python爬虫案例实战（2020 · 周更）</span></a></li>
+      <li><a href='https://www.acfun.cn/v/ac20437401'><span>2020年Python爬虫全套课程（学完可做项目）</span></a></li>
+      <li><span>🆒</span><a href='https://mp.weixin.qq.com/s/dUpSxPgTRMGTb5T7-Ya9Ow'><span>52讲轻松搞定网络爬虫</span></a></li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3><a name="④数据分析数据可视化" class="md-header-anchor"></a><span>④数据分析&amp;数据可视化</span></h3>
+    <ul>
+      <li>
+        <p><span>🔥</span><a href='https://www.acfun.cn/v/ac19843284'><span>七周成为数据分析师</span></a></p>
+      </li>
+      <li>
+        <p><a href='https://www.acfun.cn/v/ac19838235'><span>Power BI教程_商业数据可视化</span></a></p>
+      </li>
+      <li>
+        <p><span>🉑</span><a href='http://t.cn/A6qlcSCV'><span>数据分析和可视化精讲</span></a></p>
+      </li>
+      <li>
+        <p><a href='https://www.acfun.cn/v/ac20848856'><span>掌握高效数据可视化技法（完结）</span></a></p>
+      </li>
+      <li>
+        <p><a href='https://www.bilibili.com/video/BV1Kz4y1r76w'><span>内幕：报价上万的大屏数据可视化，成本只有10分钟？（附18套可视化模板）</span></a>
+        </p>
+      </li>
+      <li>
+        <p><a href='https://www.bilibili.com/video/BV1zi4y1t7YU'><span>手摸手搭建python数据可视化平台（2020 · 周更）</span></a></p>
+      </li>
+      <li>
+        <p><a
+            href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247486878&amp;idx=1&amp;sn=3515dcfefce834965458906dc9ce2880&amp;chksm=eaf6acabdd8125bdefd77bf34c50b9afa916df9aec0652fe9d87ed78e1230f7d99da4edbddbc#rd'><span>耗子尾汁！各行业都极其加分的数据分析，到底应该怎么学？</span></a>
+        </p>
+        <p>&nbsp;</p>
+      </li>
+    </ul>
+    <h3><a name="⑤聊天机器人微信机器人" class="md-header-anchor"></a><span>⑤聊天机器人&amp;微信机器人</span></h3>
+    <ul>
+      <li>
+        <p><a href='https://mp.weixin.qq.com/s/8ZdQtc2zlkUVG_g8__RlJA'><span>腾讯AI聊天机器人源代码，复制粘贴就能聊</span></a></p>
+      </li>
+      <li>
+        <p><span>💖</span><a href='https://mp.weixin.qq.com/s/KarWOWBxpx2x6V02K2sPHQ'><span>彩虹屁机器人 · 源代码</span></a></p>
+      </li>
+      <li>
+        <p><a href='http://t.cn/A6qaFUZw'><span>彩虹屁机器人 + AI · 全套教程</span></a></p>
+      </li>
+      <li>
+        <p><a href='https://mp.weixin.qq.com/s/xT3TSZTPH4O7uDMuJBElgw'><span>部署机器人</span></a><span>(以下两家性能无差别)：</span>
+        </p>
+        <ul>
+          <li><a href='http://t.cn/A6qV0C42'><span>阿里云（市场占有率高）</span></a></li>
+          <li><a href='https://curl.qcloud.com/HBu2xulk'><span>腾讯云（方便在微信操作）</span></a></li>
+        </ul>
+      </li>
+      <li>
+        <p><a href='https://www.bilibili.com/video/BV1t54y127y3'><span>Django：机器人如何部署在服务器上？</span></a></p>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3><a name="⑥心理分析httpsmpweixinqqcomssacpaqbsop2au6f7f4mqga" class="md-header-anchor"></a><span>⑥</span><a
+        href='https://mp.weixin.qq.com/s/SaCpaqbsOp2AU6f7F4MqgA'><span>心理分析</span></a></h3>
+    <ul>
+      <li><span>👉</span><a href='https://www.bilibili.com/video/BV1mi4y1j7DF'><span>武志红：成为你自己（2020 · 全90讲）</span></a>
+      </li>
+      <li><a href='https://www.acfun.cn/v/ac20499334'><span>荣格心理分析入门：认识你自己【全】</span></a></li>
+    </ul>
+    <p>&nbsp;</p>
+    <h3><a name="⑦更多精彩" class="md-header-anchor"></a><span>⑦更多精彩</span></h3>
+    <ul>
+      <li><a href='https://www.acfun.cn/v/ac18888954'><span>Google工程师：TensorFlow2.0入门到进阶</span></a></li>
+      <li><span>🔨</span><a href='https://www.acfun.cn/v/ac21081272'><span>Vue高度还原饿了么APP（完结 · 附源码）</span></a></li>
+      <li><a href='https://www.bilibili.com/video/BV1zi4y1V73n'><span>别说程序员不懂浪漫，用代码一样可以花式表白~</span></a></li>
+      <li><a
+          href='http://mp.weixin.qq.com/s?__biz=MzI2Nzg5MjgyNg==&amp;mid=2247487179&amp;idx=1&amp;sn=2246bc53f52d738001538d9ffff9a14a&amp;chksm=eaf6affedd8126e85f389c4e9fcd1ba0b6a5f07364ec786bfc7e82c1e8ef4ec003e56484e56f#rd'><span>用上这12个Chrome扩展功能，每年省出1个年假的时间~</span></a>
+      </li>
+      <li><a href='https://mp.weixin.qq.com/s/ySzv7ychUjof0lhFjSjS7w'><span>用代码写了一段银河</span></a></li>
+      <li><a href='https://mp.weixin.qq.com/s/QFlh0OB-niHupylvTPC24g'><span>早知道这些查询数据的API，我还学什么爬虫啊.doc</span></a></li>
+      <li><a href='https://mp.weixin.qq.com/s/szHwiXrC6Xl1gsjEPm6APw'><span>一个开源工具箱，帮你找出被偷走的个人数据~！</span></a></li>
+      <li><a href='https://mp.weixin.qq.com/s/hVR1NDcxc3sh6v6k4g1QZQ'><span>用 Python 修改微信（支付宝）运动步数，轻松 TOP1</span></a>
+      </li>
+      <li><a href='https://mp.weixin.qq.com/s/SaCpaqbsOp2AU6f7F4MqgA'><span>自从我用了这 7 个神奇的办公软件，效率提高了，人也精神了</span></a>
+      </li>
+    </ul>
+    <p>&nbsp;</p>
+    <h1><a name="3写在最后交流合作赞赏" class="md-header-anchor"></a><span>3、写在最后/交流合作/赞赏</span></h1>
+    <p><span>资料有很多了，只有付出时间和行动去学习和练习，才能真正地学以致用。</span></p>
+    <p><span>从法学院毕业后选择了程序员这一行的时候，我是全凭热爱；但是我也渐渐发现热爱没法当饭吃。🎯 </span><a
+        href='https://mp.weixin.qq.com/s/UrJ5PkRWYydaajGetUqFYQ'><span>关于我</span></a><span> </span></p>
+    <p><span>为了更好的长久的掌握编程这门技术，我也一直在探索适合自己的方向，不断学习新的知识。</span></p>
+    <p><span>如果你也正在IT这条路上探索，欢迎一路同行，</span></p>
+    <ul>
+      <li><span>欢迎在📋</span><a href='http://t.cn/A6qTvrFK'><span>CSDN的评论区</span></a><span>留言交流您的问题；</span></li>
+      <li><span>也欢迎点击加入：🚸 </span><a
+          href='https://mp.weixin.qq.com/s/6cR5fMSCtdI5sJdWiDwhOA'><span>我的交流群</span></a><span> ；</span></li>
+      <li><span>如果有私人问题/交流合作，欢迎联系📲我的邮箱：</span><a href='mailto:1529577833@qq.com' target='_blank'
+          class='url'>1529577833@qq.com</a></li>
+    </ul>
+    <p><span>最后，整理分享知识不易，如果资料对你帮助，感谢赞赏支持哟~💖</span><a
+        href='https://gitee.com/zhaofeng092/python_auto_office/blob/master/%E8%B4%A6%E5%8F%B7%E5%85%B1%E7%94%A8%E8%B5%84%E6%BA%90/image/%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E7%A0%81.jpg'><span>点击：打开赞赏码</span></a>
+    </p>
+    <p>&nbsp;</p>
+  </div>
 </body>
+
 </html>
