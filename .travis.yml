@@ -16,3 +16,6 @@ deploy:
   on:
     branch: main
   local-dir: public
+
+  # https://travis-ci.com/github/zhaofeng092/zhaofeng092.github.io/settings
+  # https://hexo.io/zh-cn/docs/github-pages.html
