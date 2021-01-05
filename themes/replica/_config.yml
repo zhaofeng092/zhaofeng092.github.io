@@ -1,11 +1,11 @@
 # left-side user profile
-avatar: # by default https://octodex.github.com/images/baracktocat.jpg
-location:
-email:
+avatar: https://img-blog.csdnimg.cn/20210104144004284.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center# by default https://octodex.github.com/images/baracktocat.jpg
+location: 佛山
+email: 1529577833@qq.com
 social:
-  github:
-  weibo:
-  linkedin:
+  github: https://github.com/zhaofeng092/python_auto_office
+  weibo: https://weibo.com/u/7411061007
+  linkedin: http://t.cn/A6Gkrbzw
 
 # navbar menu
 menu:
