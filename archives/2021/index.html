@@ -1,262 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archives | Python自动化办公社区</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="关注：Python入门&#x2F;自动化办公&#x2F;知识变现">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Python自动化办公社区">
+<meta property="og:url" content="http://t.cn/A6Gkrbzw/archives/2021/index.html">
+<meta property="og:site_name" content="Python自动化办公社区">
+<meta property="og:description" content="关注：Python入门&#x2F;自动化办公&#x2F;知识变现">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://t.cn/A6Gkrbzw/null">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://t.cn/A6Gkrbzw/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://t.cn/A6Gkrbzw/archives/2021/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
 
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>
-    Python自动化办公社区
-  </title>
-  <meta name="description" content="关注：Python入门/自动化办公/知识变现">
-  
-  <meta name="author" content="John Doe">
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
 
-  <meta http-equiv="Cache-Control" content="no-transform"/>
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="theme-color" content="#1e2327">
-  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
 
-  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
 
-  
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-01-05 10:05:12'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<meta name="generator" content="Hexo 5.3.0"></head>
-
-<body id="replica-app">
-
-<nav class="navbar-wrapper">
-  <div class="navbar">
-    <div class="container clearfix">
-      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
-
-      <div class="navbar-search float-left desktop-only">
-        <div class="navbar-search-form">
-          <label for="gsc-i-id1">This website</label>
-          <div id="google-search">
-            <gcse:search></gcse:search>
-          </div>
-        </div>
-      </div>
-
-      <ul class="navbar-nav float-left">
-        
-        <li><a href="/">Archives</a></li>
-        
-        
-        <li><a href="/">Categories</a></li>
-        
-        
-        <li><a href="/">Tags</a></li>
-        
-        
-        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
-        
-      </ul>
-
-      <ul class="navbar-nav user-nav float-right desktop-only">
-        <li class="user-nav-notification">
-          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
-        </li>
-        <li>
-          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li class="user-nav-logo">
-          <a><img src="https://img-blog.csdnimg.cn/20210104144004284.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center# by default https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="main-container">
-  
-
-<div class="container-lg">
-  
-
-<div class="blog-intro">
-  <div class="blog-intro-user">
-    <img class="avatar" src="https://img-blog.csdnimg.cn/20210104144004284.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjMyMTUxNw==,size_16,color_FFFFFF,t_70#pic_center# by default https://octodex.github.com/images/baracktocat.jpg">
-    <div class="user-name">
-      <div class="blog-title"></div>
-      <div class="blog-author"></div>
-        <ul class="user-detail mobile-only">
-    
-    <li>
-      <i class="fa fa-map-marker"></i>
-      佛山
-    </li>
-    
-    <li>
-      <i class="fa fa-envelope-o"></i>
-      <a href="mailto:1529577833@qq.com">1529577833@qq.com</a>
-    </li>
-    
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="http://t.cn/A6Gkrbzw">http://t.cn/A6Gkrbzw</a>
-    </li>
-  </ul>
-    </div>
-    <div class="blog-description">
-      
-    </div>
-  </div>
-
-  <ul class="user-detail desktop-only">
-    
-    <li>
-      <i class="fa fa-map-marker"></i>
-      佛山
-    </li>
-    
-    <li>
-      <i class="fa fa-envelope-o"></i>
-      <a href="mailto:1529577833@qq.com">1529577833@qq.com</a>
-    </li>
-    
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="http://t.cn/A6Gkrbzw">http://t.cn/A6Gkrbzw</a>
-    </li>
-  </ul>
-
-  <div class="social-media desktop-only">
-    <h4>Social Media</h4>
-    <ul>
-      
-      <li class="social-media-item"><a href="https://github.com/zhaofeng092/python_auto_office" target="_blank"><i class="fa fa-github"></i></a></li>
-      
-      <li class="social-media-item"><a href="https://weibo.com/u/7411061007" target="_blank"><i class="fa fa-weibo"></i></a></li>
-      
-      <li class="social-media-item"><a href="http://t.cn/A6Gkrbzw" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-      
-    </ul>
-  </div>
-</div>
-
-
-  <div class="blog-detail">
-    
-<nav class="blog-detail-nav desktop-only">
-  <ul class="clearfix">
-    <li class="">
-      <a href="/">Overview</a></li>
-    <li class="selected">
-      <a href="/">Posts <span class="counter">2</span></a>
-    </li>
-    <li class="">
-      <a href="/">Categories <span
-                class="counter">0</span></a></li>
-    <li class="">
-      <a href="/">Tags <span class="counter">0</span></a></li>
-  </ul>
-</nav>
-
-    <div class="body-secondary">
-      <ul class="archive-list">
-        
-        <li class="archive-list-item">
-          <h2><a href="/2021/01/05/My-New-Post/">Python自动化办公社区 · 资源仓库</a></h2>
-          <p>
-             
-        
-        
-        
-        
- 
-
-
-
-
- 
-     if 你是程序员：👆请点击上方第一个红色按钮，进行    /    即可~ 
- 
-     else 你是编程小白：👇请点击下方目录，自动跳转。💖随时更新，记得收藏/点赞哟~ 
- 
- 
- [T...
-          </p>
-          <ul class="tag-list clearfix">
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <i class="fa fa-folder-open"></i> Uncategorized
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 0 </span>
-            <span>Published {{moment(1609859194000).fromNow()}}</span>
-          </div>
-        </li>
-        
-        <li class="archive-list-item">
-          <h2><a href="/2021/01/05/hello-world/">Hello World</a></h2>
-          <p>
-             Welcome to  Hexo ! This is your very first post. Check  documentation  for more info. If you get any problems when using Hexo, you can find the answe...
-          </p>
-          <ul class="tag-list clearfix">
-            
-          </ul>
-          <div class="post-info">
-            <span>
-              
-              <i class="fa fa-folder-open"></i> Uncategorized
-              
-            </span>
-            <span><i class="fa fa-tag"></i> 0 </span>
-            <span>Published {{moment(1609837057041).fromNow()}}</span>
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<div class="footer-wrapper container">
-  <footer class="footer clearfix">
-    <div class="clearfix">
-    <a href="http://t.cn/A6Gkrbzw" class="footer-logo">
-      <i class="fa fa-github"></i>
-    </a>
-    <ul class="footer-social-link">
-      <li>© 2019 John Doe</li>
-      <li><a href="http://t.cn/A6Gkrbzw">Home</a></li>
-      
-      <li><a target="_blank" rel="noopener" href="https://github.com/zhaofeng092/python_auto_office">Github</a></li>
-      
-      <li><a target="_blank" rel="noopener" href="https://weibo.com/u/7411061007">Weibo</a></li>
-      
-      <li><a href="http://t.cn/A6Gkrbzw">Linkedin</a></li>
-      
-    </ul>
-    <div class="footer-theme-info">
-      Theme <a target="_blank" rel="noopener" href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
-      by <a target="_blank" rel="noopener" href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
-    </div>
-    </div>
-    
-  </footer>
-</div>
-
-
-
-
-<script src="/js/main.js"></script>
-
-</body>
-</html>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="not-index-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Python自动化办公社区</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">Archives</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">Articles - 2</div><div class="article-sort"><div class="article-sort-item year">2021</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2021/01/05/My-New-Post/" title="Python自动化办公社区 · 资源仓库"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="Python自动化办公社区 · 资源仓库" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-01-05T15:06:34.000Z" title="Created 2021-01-05 15:06:34">2021-01-05</time></div><a class="article-sort-item-title" href="/2021/01/05/My-New-Post/" title="Python自动化办公社区 · 资源仓库">Python自动化办公社区 · 资源仓库</a></div></div><div class="article-sort-item"><a class="article-sort-item-img" href="/2021/01/05/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="Hello World" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2021-01-05T10:04:54.949Z" title="Created 2021-01-05 10:04:54">2021-01-05</time></div><a class="article-sort-item-title" href="/2021/01/05/hello-world/" title="Hello World">Hello World</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">John Doe</div><div class="author-info__description">关注：Python入门/自动化办公/知识变现</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/05/My-New-Post/" title="Python自动化办公社区 · 资源仓库"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python自动化办公社区 · 资源仓库"/></a><div class="content"><a class="title" href="/2021/01/05/My-New-Post/" title="Python自动化办公社区 · 资源仓库">Python自动化办公社区 · 资源仓库</a><time datetime="2021-01-05T15:06:34.000Z" title="Created 2021-01-05 15:06:34">2021-01-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/05/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/01/05/hello-world/" title="Hello World">Hello World</a><time datetime="2021-01-05T10:04:54.949Z" title="Created 2021-01-05 10:04:54">2021-01-05</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">January 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-01-05T10:05:12.053Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
