@@ -103,6 +103,4 @@ theme: replica
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repository: git@github.com:zhaofeng092/zhaofeng092.github.io.git
-  branch: main
+  type: ''
