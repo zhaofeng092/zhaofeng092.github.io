@@ -1,7 +1,7 @@
 ---
 title: Python自动化办公社区 · 资源仓库
 date: 2021-01-05 15:06:34
-tags:
+tags: 自动化办公
 ---
 <div align="center">
     <a href="https://github.com/zhaofeng092/python_auto_office"> <img src="https://badgen.net/badge/Github/%E7%A8%8B%E5%BA%8F%E5%91%98?icon=github&color=red"></a>
